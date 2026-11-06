@@ -1,0 +1,21 @@
+# Period-compatible versions for the 2024 Colab notebooks (Python 3.10).
+# The notebooks recorded only accelerate==0.28.0 and numpy==1.24; the other pins are chosen to match.
+# notebooks/RILEC_diversity.ipynb installs its own dependencies in its first cell.
+torch==2.2.2
+transformers==4.39.3
+datasets==2.18.0
+evaluate==0.4.1
+accelerate==0.28.0
+trl==0.8.1
+rich==13.7.1
+numpy==1.24.4
+pandas==2.0.3
+wandb==0.16.6
+spacy==3.7.4
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+pyinflect==0.5.1
+nltk==3.8.1
+transliterate==1.10.2
+googletrans==4.0.0rc1
+filelock==3.13.4
+tqdm==4.66.2
