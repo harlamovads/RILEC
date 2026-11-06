@@ -4,7 +4,7 @@
 
 📚 [Dataset](https://huggingface.co/datasets/Zlovoblachko/RILEC) • 🤗 [Models](#models) • 📃 [Paper](https://aclanthology.org/2026.lrec-1.848/) • 📄 [arXiv](https://arxiv.org/abs/2603.07366)
 
-Many errors in student essays come from the writer's first language: a Russian speaker may write *stadion* for *stadium* because of the Russian word *stadion*. Grammatical error detection tools can flag such a word, but they do not explain where the error came from.
+Many errors in student essays come from the writer's first language: a Russian speaker may write *stadion* for *stadium* because of the Russian word *stadion* (*стадион*). Grammatical error detection tools can flag such a word, but they do not explain where the error came from.
 
 RILEC is a dataset for detecting these errors in English essays by Russian-speaking learners. It combines expert-annotated sentences from the [REALEC](https://realec.org) learner corpus with synthetic sentences from rule-based and neural augmentation, labelled with five interference error types. This repository contains the code that generated the synthetic data. The corpus and the models are on Hugging Face.
 
@@ -64,7 +64,7 @@ The tagset derives from Weinreich's analysis of language interference. Examples 
 | `LLM_errorifier - full.tsv` | LLM-prompted generations, plus REALEC sentences | 2,801 |
 | `Rule_based_errorifier - full.tsv` | GECToR-style replacement only, with no REALEC sentences | 5,900 |
 
-The sources break down approximately as follows. The totals differ from `All_aug` by a few rows.
+The sources break down approximately as follows.
 
 | Source | CopExp | Syn | TenSem | Transl. | WFT | Total |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -220,7 +220,7 @@ Two steps are not scripted here. The prompts for LLM generation and annotation a
 
 ## Results
 
-These F1 scores (%) are reported in Table 5 of the paper, for RoBERTa models fine-tuned on each data subset and evaluated on the REALEC-L1 test set. The best score in each column is in bold.
+These F1 scores are reported in Table 5 of the paper, for RoBERTa models fine-tuned on each data subset and evaluated on the REALEC-L1 test set. The best score in each column is in bold.
 
 | Training data | CopExp | Syn | TenSem | Transl. | WFT | Average |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
